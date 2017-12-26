@@ -11,5 +11,5 @@ setup(name='freecad-ipython',
       maintainer_email="sppedflyer@gmail.com",
       url="https://github.com/looooo/freecad-spyder",
       description="integrating qt-console of ipython into freecad",
-      install_requires=['numpy'],
+      install_requires=[],
 include_package_data=True)
