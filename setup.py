@@ -1,12 +1,16 @@
 from setuptools import setup
-from freecad.ipython_integration import __version__
-# name: this is the name pip is using.
-# Packages using the same name here cannot be installed together
+import os
 
-setup(name='freecad-ipython',
+version_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 
+                            "freecad", "ipython", "version.py")
+with open(version_path) as fp:
+    exec(fp.read())
+
+
+setup(name='freecad.ipython',
       version=str(__version__),
       packages=['freecad',
-                'freecad.ipython_integration'],
+                'freecad.ipython'],
       maintainer="looooo",
       maintainer_email="sppedflyer@gmail.com",
       url="https://github.com/looooo/freecad-spyder",

@@ -26,7 +26,8 @@ def put_ipy(parent, mw):
     parent.setWidget(widget)
     widget.show()
     kernel.shell.push({'widget':widget,'kernel':kernel, 'parent':parent})
-    kernel.shell.push({'App':App,'Gui':Gui, 'FreeCAD': App, 'FreeCADGui': Gui})
+    kernel.shell.push({'App':App,'Gui':Gui, 'FreeCAD': App, 'FreeCADGui': Gui, kernel: 'kernel'})
+    kernel.shell.ex("print('hello')")
     return widget
 
 mw = Gui.getMainWindow()
